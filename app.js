@@ -1,4 +1,5 @@
-import React, { useState, useEffect, useMemo, useCallback, useRef } from 'react';
+// --- 直接從全域 React 物件解構所需的方法 ---
+const { useState, useEffect, useMemo, useCallback, useRef } = React;
 
 // --- Helper: 動態載入外部腳本的 Hook ---
 const useScript = (src) => {
@@ -552,6 +553,7 @@ const TopicAnalysisView = ({ tmsData, sbmData, fieldMappings, isVisible, allFile
 
 
 // --- Main Application Component ---
+// **移除 `export default`，因為我們不是在使用 ES 模組**
 function App() {
     // --- Hooks and State ---
     const papaParseStatus = useScript("https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js");
@@ -854,4 +856,3 @@ function App() {
         </div>
     );
 }
-
