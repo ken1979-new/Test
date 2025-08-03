@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>測試案例分析儀表板</title>
+    
+    <!-- 載入 Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- 載入 React 核心函式庫 -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    
+    <!-- 載入 Babel，讓瀏覽器能讀懂 JSX 語法 -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <style>
+        /* 簡單的載入中樣式 */
+        #root:empty::before {
+            content: "應用程式載入中...";
+            display: block;
+            text-align: center;
+            padding-top: 50px;
+            font-size: 1.2rem;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <!-- 這是 React 應用程式將會被渲染的地方 -->
+    <div id="root"></div>
+
+    <!-- 載入您的 React 應用程式程式碼 -->
+    <!-- 注意：這裡的 type 必須是 "text/babel" -->
+    <script type="text/babel" src="App.js"></script>
+
+    <!-- 啟動 React 應用程式 -->
+    <script type="text/babel">
+        const container = document.getElementById('root');
+        const root = ReactDOM.createRoot(container);
+        root.render(<App />);
+    </script>
+</body>
+</html>
