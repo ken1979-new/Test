@@ -552,7 +552,7 @@ const TopicAnalysisView = ({ tmsData, sbmData, fieldMappings, isVisible, allFile
 
 
 // --- Main Application Component ---
-export default function App() {
+function App() {
     // --- Hooks and State ---
     const papaParseStatus = useScript("https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js");
     const xlsxStatus = useScript("https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js");
@@ -854,3 +854,4 @@ export default function App() {
         </div>
     );
 }
+
